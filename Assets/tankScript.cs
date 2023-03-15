@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gunFairyScript : enemyScript
+public class tankScript : enemyScript
 {
     private float shootTimer;
     private Vector3 startPosition;
     private Vector3 velocity;
     private Rigidbody2D rb;
 
-    public float movementRadius;
+    public float movementRange;
     public float movementSpeed;
     public float shootDelay;
     public GameObject projectile;
+
 
     // Start is called before the first frame update
     void Start()
     {
         HP = maxHP;
-        startPosition = transform.position;
         shootTimer = 0;
-        velocity = (Vector3.up + Vector3.right).normalized * movementSpeed;
+        startPosition = transform.position;
+        velocity = Vector3.right * movementSpeed;
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -38,19 +39,10 @@ public class gunFairyScript : enemyScript
 
     private void FixedUpdate()
     {
-        //change horizontal movement
-        if (transform.position.x < startPosition.x && velocity.x < 0 || transform.position.x > startPosition.x + movementRadius && velocity.x > 0)
+        if(transform.position.x < startPosition.x && velocity.x < 0 || transform.position.x > startPosition.x + movementRange && velocity.x > 0)
         {
             velocity.x *= -1;
         }
-
-        //change vertical movement
-        if (transform.position.y < startPosition.y - (movementRadius/2) && velocity.y < 0 || transform.position.y > startPosition.y + (movementRadius/2) && velocity.y > 0)
-        {
-            velocity.y *= -1;
-        }
-
-        //move
         rb.MovePosition(transform.position + velocity);
     }
 }

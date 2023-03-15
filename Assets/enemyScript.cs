@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyScript : MonoBehaviour
+public abstract class enemyScript : MonoBehaviour
 {
     protected int HP;
-
     public int maxHP = 10;
+
+    protected abstract void PerformBehavior();
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class enemyScript : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        PerformBehavior();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
