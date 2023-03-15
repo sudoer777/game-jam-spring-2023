@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class enemyScript : MonoBehaviour
 {
-    public int HP;
+    protected int HP;
+
     public int maxHP = 10;
 
     // Start is called before the first frame update
