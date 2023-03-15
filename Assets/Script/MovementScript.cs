@@ -35,7 +35,7 @@ public class MovementScript : MonoBehaviour
 
 
     //Dash Variables
-    private bool canDash = true;
+    public bool canDash = true;
     private bool isFacingRight = true;
     private bool isDashing;
     private float dashingPower = 40f;
@@ -118,21 +118,23 @@ public class MovementScript : MonoBehaviour
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
-            /*Vector3 localScale = transform.localScale;
+            Vector3 localScale = transform.localScale;
             isFacingRight = !isFacingRight;
             localScale.x *= -1f;
             transform.localScale = localScale;
-            */
-            isFacingRight = !isFacingRight;
+            
+            
+            /*isFacingRight = !isFacingRight;
 
-        if (isFacingRight)
-        {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
+            if (isFacingRight)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            */
             
         }
         
@@ -154,7 +156,7 @@ public class MovementScript : MonoBehaviour
         if (isSliding)
         {
             isWallJumping = false;
-            wallJumpingDirection = -transform.rotation.y;
+            wallJumpingDirection = -transform.localScale.x;
             wallJumpingCounter = wallJumpingTime;
 
             CancelInvoke(nameof(StopWallJumping));
@@ -170,9 +172,13 @@ public class MovementScript : MonoBehaviour
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
 
-            if (transform.rotation.y != wallJumpingDirection)
+            if (transform.localScale.x != wallJumpingDirection)
             {
                 isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+                /*isFacingRight = !isFacingRight;
                 if (isFacingRight)
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -181,6 +187,7 @@ public class MovementScript : MonoBehaviour
                 {
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                 }
+                */
             }
 
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
