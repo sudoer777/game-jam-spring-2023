@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Kill
   - Wall
+  - EnemyProjectile
+  - PlayerProjectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
