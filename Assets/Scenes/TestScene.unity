@@ -624,7 +624,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7798845797645460970, guid: c6cbedcca9436b1479d1d3ef7a0ffc08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c6cbedcca9436b1479d1d3ef7a0ffc08, type: 3}
 --- !u!4 &367318465 stripped
 Transform:
@@ -1125,7 +1126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b34c7ab2a853241966509882aebfa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportPosition: {fileID: 1666069575}
 --- !u!1 &745361782
 GameObject:
   m_ObjectHideFlags: 0
