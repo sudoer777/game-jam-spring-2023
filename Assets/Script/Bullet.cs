@@ -29,11 +29,11 @@ public class Bullet : MonoBehaviour
         }
         if(other.gameObject.tag == "Enemy")
         {
-            enemyRef.isDead = true;
+            /*enemyRef.isDead = true;
             if(enemyRef.isDead)
             {
                 Debug.Log("EnemyHit");
-            }
+            }*/
             Destroy(gameObject);
             Destroy(other.gameObject, 0.5f);
         }
