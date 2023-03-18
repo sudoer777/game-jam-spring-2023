@@ -21,7 +21,7 @@ public class switchChar : MonoBehaviour
     {
         
         switchSprite = GetComponent<SpriteRenderer>();
-        switchSprite.color = new Color(1f, 0.8560839f, 0.3056604f, 1f);
+        // switchSprite.color = new Color(1f, 0.8560839f, 0.3056604f, 1f);
         healthRef.color = new Color(0.9622642f, 0.6039352f, 0.1942684f, 1f);
         
     }
@@ -50,7 +50,7 @@ public class switchChar : MonoBehaviour
             }
             if(isSol == true)
             {
-                switchSprite.color = new Color(0.5607843f, 0.3058824f, 1f, 1f);
+                // switchSprite.color = new Color(0.5607843f, 0.3058824f, 1f, 1f);
                 healthRef.color = new Color(0.7830674f, 0.4849057f, 1f, 1f);
                 // refMove.movementSpeed = 4;
                 refShoot.enabled = false;
@@ -60,7 +60,7 @@ public class switchChar : MonoBehaviour
             }
             else if(isSol == false)
             {
-                switchSprite.color = new Color(1f, 0.8560839f, 0.3056604f, 1f);
+                // switchSprite.color = new Color(1f, 0.8560839f, 0.3056604f, 1f);
                 healthRef.color = new Color(0.9622642f, 0.6039352f, 0.1942684f, 1f);
                 // refMove.movementSpeed = 4;
                 refShoot.enabled = true;
