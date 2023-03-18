@@ -2723,6 +2723,18 @@ PrefabInstance:
       propertyPath: healthValue
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: refMove
+      value: 
+      objectReference: {fileID: 1177273983}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: healthRef
+      value: 
+      objectReference: {fileID: 131810000}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 3147934279846383504, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: moveRef
       value: 
