@@ -847,6 +847,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothTime: 0.25
   target: {fileID: 367318465}
+--- !u!1 &637186855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5036505154859350843, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+  m_PrefabInstance: {fileID: 5036505154664558214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649323953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1921,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -1074480454345540203, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
   m_PrefabInstance: {fileID: 5036505154664558214}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 637186855}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bfd7a39923d78a49acf6f8648da672c, type: 3}
@@ -1927,7 +1932,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5036505154859350852, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
   m_PrefabInstance: {fileID: 5036505154664558214}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 637186855}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7bfbb16f10fd59479d8306b9ce77918, type: 3}
@@ -2193,12 +2198,47 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4261322894262708184, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
   m_PrefabInstance: {fileID: 5036505154664558214}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 637186855}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb1ef69fe8c31b143800519096af299a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1488325906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637186855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee44c2e7fef945679c665001d4afefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startatkDelay: 0
+  attackPos: {fileID: 0}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 0
+--- !u!114 &1488325907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637186855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e493eab51cdc459f8a3a83c02008d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingPoint: {fileID: 367318465}
+  bulletPrefab: {fileID: 3748886634273576622, guid: 4ca3a580e33afb6428cea5072c43512a, type: 3}
+  chargedBullet: {fileID: 6336023529669325299, guid: e3bb4502efabea2409468b5e37a59d53, type: 3}
+  chargeSpeed: 0
+  chargeTime: 0
 --- !u!1 &1666069573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2768,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1177273983}
     - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: refShoot
+      value: 
+      objectReference: {fileID: 1488325907}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: healthRef
       value: 
       objectReference: {fileID: 131810000}
@@ -2735,6 +2779,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: refAttack
+      value: 
+      objectReference: {fileID: 1488325906}
     - target: {fileID: 3147934279846383504, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: moveRef
       value: 
