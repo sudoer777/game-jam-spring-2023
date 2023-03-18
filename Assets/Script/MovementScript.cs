@@ -10,6 +10,7 @@ public class MovementScript : MonoBehaviour
     //Jump Variables
     public float jumpForce = 7.0f;
     public int maxJumps = 2;
+    public Animator animator;
 
     private Rigidbody2D rb;
     private int jumpsRemaining;
@@ -102,6 +103,14 @@ public class MovementScript : MonoBehaviour
         if (!isWallJumping)
         {
             rb.velocity = new Vector2(horizontal * movementSpeed, rb.velocity.y);
+            if (horizontal != 0f)
+            {
+                animator.Play("Walk");
+            }
+            else
+            {
+                animator.Play("Idle");
+            }
         }
         if(isSliding)
         {

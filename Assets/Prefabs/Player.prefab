@@ -308,6 +308,7 @@ MonoBehaviour:
   movementSpeed: 4
   jumpForce: 7.5
   maxJumps: 2
+  animator: {fileID: 7754458624663476604}
   groundCheck: {fileID: 5036505152947001744}
   groundLayer:
     serializedVersion: 2
