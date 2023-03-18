@@ -52,7 +52,7 @@ public class switchChar : MonoBehaviour
             {
                 switchSprite.color = new Color(0.5607843f, 0.3058824f, 1f, 1f);
                 healthRef.color = new Color(0.7830674f, 0.4849057f, 1f, 1f);
-                refMove.movementSpeed = 12;
+                // refMove.movementSpeed = 4;
                 refShoot.enabled = false;
                 refAttack.enabled = true;
                 playerCam.backgroundColor = new Color(0.2711051f, 0.1718227f, 0.4622642f, 1f);
@@ -62,7 +62,7 @@ public class switchChar : MonoBehaviour
             {
                 switchSprite.color = new Color(1f, 0.8560839f, 0.3056604f, 1f);
                 healthRef.color = new Color(0.9622642f, 0.6039352f, 0.1942684f, 1f);
-                refMove.movementSpeed = 7;
+                // refMove.movementSpeed = 4;
                 refShoot.enabled = true;
                 refAttack.enabled = false;
                 playerCam.backgroundColor = new Color(0.346351f, 0.5565226f, 0.8867924f, 1f);

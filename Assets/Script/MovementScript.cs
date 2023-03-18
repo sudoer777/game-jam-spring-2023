@@ -6,7 +6,7 @@ public class MovementScript : MonoBehaviour
 {
     public AudioSource dashSFX;
     private float horizontal;
-    public float movementSpeed = 5.0f;
+    public float movementSpeed;
     //Jump Variables
     public float jumpForce = 7.0f;
     public int maxJumps = 2;

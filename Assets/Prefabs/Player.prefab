@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 37653825784079131}
   - component: {fileID: 963994323364480249}
   - component: {fileID: 32561747398793592}
+  - component: {fileID: 7754458624663476604}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -304,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSFX: {fileID: 0}
-  movementSpeed: 7
+  movementSpeed: 4
   jumpForce: 7.5
   maxJumps: 2
   groundCheck: {fileID: 5036505152947001744}
@@ -527,6 +528,27 @@ MonoBehaviour:
   chargedBullet: {fileID: 6336023529669325299, guid: e3bb4502efabea2409468b5e37a59d53, type: 3}
   chargeSpeed: 0
   chargeTime: 0
+--- !u!95 &7754458624663476604
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036505154859350843}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9778b1bfd0ef40fd87839b3d7f1f607, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5036505154884580560
 GameObject:
   m_ObjectHideFlags: 0
