@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: -1074480454345540203}
   - component: {fileID: 4261322894262708184}
   - component: {fileID: 5036505154859350850}
+  - component: {fileID: 37653825784079131}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -470,6 +471,25 @@ TrailRenderer:
   m_MinVertexDistance: 2
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!114 &37653825784079131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036505154859350843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26da27913ed494ef283b8d5a87dc1e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthRef: {fileID: 0}
+  slowDownFactor: 0.05
+  slowDownLength: 2
+  playerCam: {fileID: 0}
+  refMove: {fileID: 0}
+  refAttack: {fileID: 0}
+  refShoot: {fileID: 0}
 --- !u!1 &5036505154884580560
 GameObject:
   m_ObjectHideFlags: 0
