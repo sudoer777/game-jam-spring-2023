@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7599959079896409393}
   - component: {fileID: 6719575395569311670}
   - component: {fileID: 4925782007319822964}
-  - component: {fileID: 1947491687511162150}
   - component: {fileID: -1958397949387373638}
   m_Layer: 0
   m_Name: ChargeBeam
@@ -135,21 +134,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1947491687511162150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6336023529669325299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fcaa62949ba16d498fb3f08c8e4e150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyRef: {fileID: 7798845797645460970, guid: c6cbedcca9436b1479d1d3ef7a0ffc08, type: 3}
-  bulletSpeed: 45
-  rb2d: {fileID: 6719575395569311670}
 --- !u!96 &-1958397949387373638
 TrailRenderer:
   serializedVersion: 2
