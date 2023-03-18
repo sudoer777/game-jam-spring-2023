@@ -14,6 +14,9 @@ public class gunFairyScript : enemyScript
     public float movementSpeed;
     public float shootDelay;
     public GameObject projectile;
+    public float HP;
+
+    private const float maxHP = 100;
 
     // Start is called before the first frame update
     void Start()

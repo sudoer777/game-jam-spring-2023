@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3748886634273576621}
   - component: {fileID: 3748886634273576620}
   - component: {fileID: 3748886634273576623}
-  - component: {fileID: -3829374977512778557}
   - component: {fileID: 4496923587630074371}
   m_Layer: 0
   m_Name: Bullet
@@ -125,21 +124,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
---- !u!114 &-3829374977512778557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3748886634273576622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fcaa62949ba16d498fb3f08c8e4e150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyRef: {fileID: 7798845797645460970, guid: c6cbedcca9436b1479d1d3ef7a0ffc08, type: 3}
-  bulletSpeed: 15
-  rb2d: {fileID: 3748886634273576620}
 --- !u!96 &4496923587630074371
 TrailRenderer:
   serializedVersion: 2

@@ -72,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5036505153260524838}
   - component: {fileID: 5036505153260524836}
-  - component: {fileID: 5036505153260524839}
   m_Layer: 0
   m_Name: Muzzle
   m_TagString: Untagged
@@ -147,23 +146,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5036505153260524839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5036505153260524825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ea603cd9407ac45805aae2597fff8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingPoint: {fileID: 5036505154884580561}
-  bulletPrefab: {fileID: 3748886634273576622, guid: 4ca3a580e33afb6428cea5072c43512a, type: 3}
-  chargedBullet: {fileID: 6336023529669325299, guid: e3bb4502efabea2409468b5e37a59d53, type: 3}
-  chargeSpeed: 2
-  chargeTime: 3
 --- !u!1 &5036505154859350843
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,9 +162,8 @@ GameObject:
   - component: {fileID: 3147934279846383504}
   - component: {fileID: -1074480454345540203}
   - component: {fileID: 4261322894262708184}
-  - component: {fileID: 5036505154859350848}
-  - component: {fileID: 5036505154859350851}
   - component: {fileID: 5036505154859350850}
+  - component: {fileID: 37653825784079131}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -378,43 +359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1ef69fe8c31b143800519096af299a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5036505154859350848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5036505154859350843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a437d04892da16242ae7f53894050252, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startatkDelay: 0
-  attackPos: {fileID: 0}
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 0
-  attackRange: 0
---- !u!114 &5036505154859350851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5036505154859350843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb90155d5aea2746a444267d33bed70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthRef: {fileID: 0}
-  slowDownFactor: 0.05
-  slowDownLength: 2
-  playerCam: {fileID: 0}
-  refMove: {fileID: 5036505154859350852}
-  refAttack: {fileID: 0}
-  refShoot: {fileID: 0}
+  xpImage: {fileID: 0}
+  maxXP: 10
+  currentXP: 0
 --- !u!96 &5036505154859350850
 TrailRenderer:
   serializedVersion: 2
@@ -524,6 +471,25 @@ TrailRenderer:
   m_MinVertexDistance: 2
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!114 &37653825784079131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036505154859350843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26da27913ed494ef283b8d5a87dc1e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthRef: {fileID: 0}
+  slowDownFactor: 0.05
+  slowDownLength: 2
+  playerCam: {fileID: 0}
+  refMove: {fileID: 0}
+  refAttack: {fileID: 0}
+  refShoot: {fileID: 0}
 --- !u!1 &5036505154884580560
 GameObject:
   m_ObjectHideFlags: 0
