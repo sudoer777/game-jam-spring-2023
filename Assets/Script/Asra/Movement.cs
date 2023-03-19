@@ -23,6 +23,8 @@ namespace Script.Asra
 
         private void Update()
         {
+            rb.gravityScale = 2.0f;
+
             // Wall Jump
             isWallTouch = Physics2D.OverlapBox(wallCheck.position, new Vector2(0.3f, 0.84f), 0, wallLayer);
 

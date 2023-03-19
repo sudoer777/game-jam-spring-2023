@@ -657,7 +657,6 @@ MonoBehaviour:
   slowDownFactor: 0.05
   slowDownLength: 2
   playerCam: {fileID: 0}
-  refMove: {fileID: 0}
   refAttack: {fileID: 963994323364480249}
   refShoot: {fileID: 32561747398793592}
   backgroundObj: {fileID: 0}
@@ -672,6 +671,8 @@ MonoBehaviour:
   characterAnimator: {fileID: 7754458624663476604}
   dayAnimatorController: {fileID: 9100000, guid: b01c2778c923f40e69f0e9fda8187547, type: 2}
   nightAnimatorController: {fileID: 9100000, guid: b9778b1bfd0ef40fd87839b3d7f1f607, type: 2}
+  dayMovement: {fileID: 3931082791576591171}
+  nightMovement: {fileID: 177585827796281601}
 --- !u!114 &963994323364480249
 MonoBehaviour:
   m_ObjectHideFlags: 0

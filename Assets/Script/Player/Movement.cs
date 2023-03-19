@@ -38,7 +38,7 @@ namespace Script.Player
         {
             rb = GetComponent<Rigidbody2D>();
         }
-        void Start()
+        protected void Start()
         {
             jumpsRemaining = maxJumps;
         }

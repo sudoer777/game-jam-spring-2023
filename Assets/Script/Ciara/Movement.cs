@@ -16,7 +16,7 @@ namespace Script.Ciara
         private bool floatIsGrounded;
         private bool lowerFloatIsGrounded;
 
-        private bool hoverMode = true;
+        private bool hoverMode = false;
         private bool jumpMode = false;
         private float maxHoverSpeed = 0.5f;
 

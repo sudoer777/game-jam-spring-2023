@@ -10,7 +10,6 @@ public class switchChar : MonoBehaviour
     public float slowDownLength = 2f;
     private float switchCooldown = 2;
     public Camera playerCam;
-    public Script.Player.Movement refMove;
     public attackScript refAttack;
     public shootScript refShoot;
     public GameObject backgroundObj;
@@ -25,6 +24,8 @@ public class switchChar : MonoBehaviour
     public Animator characterAnimator;
     public RuntimeAnimatorController dayAnimatorController;
     public RuntimeAnimatorController nightAnimatorController;
+    public Script.Player.Movement dayMovement;
+    public Script.Player.Movement nightMovement;
 
     private bool isSol;
     private float canSwitch = 0;
@@ -82,6 +83,8 @@ public class switchChar : MonoBehaviour
                 refShoot.enabled = false;
                 refAttack.enabled = true;
                 playerCam.backgroundColor = new Color(0.2711051f, 0.1718227f, 0.4622642f, 1f);
+                nightMovement.enabled = true;
+                dayMovement.enabled = false;
 
                 background.sprite = backgroundNight;
                 buildingBackground.sprite = buildingBackgroundNight;
@@ -96,6 +99,8 @@ public class switchChar : MonoBehaviour
                 refShoot.enabled = true;
                 refAttack.enabled = false;
                 playerCam.backgroundColor = new Color(0.346351f, 0.5565226f, 0.8867924f, 1f);
+                nightMovement.enabled = false;
+                dayMovement.enabled = true;
                 
                 background.sprite = backgroundDay;
                 buildingBackground.sprite = buildingBackgroundDay;
