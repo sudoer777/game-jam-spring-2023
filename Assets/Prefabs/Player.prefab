@@ -494,6 +494,15 @@ MonoBehaviour:
   refMove: {fileID: 5036505154859350852}
   refAttack: {fileID: 963994323364480249}
   refShoot: {fileID: 32561747398793592}
+  background: {fileID: 0}
+  buildingBackground: {fileID: 0}
+  buildingForeground: {fileID: 0}
+  backgroundDay: {fileID: 21300000, guid: a77a832f6409b463486d657226e9d283, type: 3}
+  backgroundNight: {fileID: 21300000, guid: 1ff6e8f0bf5b6420b96c8aa32d6e4093, type: 3}
+  buildingBackgroundDay: {fileID: 21300000, guid: 784c1af7194e245aaba891c20524b938, type: 3}
+  buildingBackgroundNight: {fileID: 21300000, guid: 6d002d14d0eec4ef69e502810c2226d5, type: 3}
+  buildingForegroundDay: {fileID: 21300000, guid: 47f5bbd41f0614cbb8f73819de4c99a1, type: 3}
+  buildingForegroundNight: {fileID: 21300000, guid: 3f7fb0b4af42c4d3fab6ac113c2f8e78, type: 3}
 --- !u!114 &963994323364480249
 MonoBehaviour:
   m_ObjectHideFlags: 0

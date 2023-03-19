@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 97765113}
   - component: {fileID: 97765112}
   m_Layer: 0
-  m_Name: daytimeloop bg
+  m_Name: Building background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,13 +199,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97765111}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.78, y: 3, z: 9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42.477802, y: 3.2734272, z: 9.319913}
   m_LocalScale: {x: 3.5297725, y: 3.5297728, z: 3.5297728}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 623931142}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123909784
 GameObject:
@@ -930,6 +930,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothTime: 0.25
   target: {fileID: 367318465}
+--- !u!1 &623931141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623931142}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &623931142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623931141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.697805, y: -0.27342734, z: -0.31991252}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1288215768}
+  - {fileID: 97765113}
+  - {fileID: 1380933032}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &649323953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,7 +2066,7 @@ GameObject:
   - component: {fileID: 1288215768}
   - component: {fileID: 1288215767}
   m_Layer: 0
-  m_Name: daytimeloop foreground
+  m_Name: Building foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2097,13 +2131,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288215766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.82, y: 4.38, z: 8}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24.517805, y: 4.6534276, z: 8.319913}
   m_LocalScale: {x: 1.5069115, y: 1.2770334, z: 1.5123559}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 623931142}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374764834
 GameObject:
@@ -2244,7 +2278,7 @@ GameObject:
   - component: {fileID: 1380933032}
   - component: {fileID: 1380933031}
   m_Layer: 0
-  m_Name: daytime 2px
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2309,13 +2343,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380933030}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.6294, y: 6.89, z: 10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 49.497803, y: 3.2734272, z: 10.319913}
   m_LocalScale: {x: -17613.91, y: -1898.9, z: -1898.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 623931142}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1390024785
 GameObject:
@@ -2448,6 +2482,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb1ef69fe8c31b143800519096af299a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1488325902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 32561747398793592, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+  m_PrefabInstance: {fileID: 5036505154664558214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e493eab51cdc459f8a3a83c02008d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1488325903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 963994323364480249, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+  m_PrefabInstance: {fileID: 5036505154664558214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee44c2e7fef945679c665001d4afefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1666069573
@@ -3042,7 +3098,7 @@ PrefabInstance:
     - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: refShoot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1488325902}
     - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: healthRef
       value: 
@@ -3054,7 +3110,31 @@ PrefabInstance:
     - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: refAttack
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1488325903}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 1380933031}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: backgroundObj
+      value: 
+      objectReference: {fileID: 1380933030}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: buildingBackground
+      value: 
+      objectReference: {fileID: 97765112}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: buildingForeground
+      value: 
+      objectReference: {fileID: 1288215767}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: buildingBackgroundObj
+      value: 
+      objectReference: {fileID: 97765111}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: buildingForegroundObj
+      value: 
+      objectReference: {fileID: 1288215766}
     - target: {fileID: 3147934279846383504, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: moveRef
       value: 
@@ -3129,11 +3209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5036505154859350855, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.35
+      value: -8.72
       objectReference: {fileID: 0}
     - target: {fileID: 5036505154859350855, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.42
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 5036505154859350855, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: m_LocalPosition.z
