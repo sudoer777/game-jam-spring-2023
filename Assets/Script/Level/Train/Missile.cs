@@ -10,9 +10,9 @@ public class Missile : MonoBehaviour
 
     public GameObject explosion;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             Instantiate(explosion, missileLocation, Quaternion.identity);
             Destroy(gameObject);
