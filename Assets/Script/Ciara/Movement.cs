@@ -83,12 +83,7 @@ namespace Script.Ciara
                 rb.velocity = new Vector2(rb.velocity.x, Math.Max(rb.velocity.y, 0.0f));
             }
         }
-
-        private void EndJump(System.Object source, EventArgs e)
-        {
-            jumpMode = false;
-        }
-}
+    }
 }
 
 

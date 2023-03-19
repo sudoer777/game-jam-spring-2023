@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -89,12 +90,27 @@ namespace Script.Player
 
         private void Flip()
         {
-            if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+            if (horizontal < 0f)
+            {
+                Vector3 localScale = transform.localScale;
+                isFacingRight = false;
+                localScale.x = -Math.Abs(localScale.x);
+                transform.localScale = localScale;
+            }
+            if (horizontal > 0f)
+            {
+                Vector3 localScale = transform.localScale;
+                isFacingRight = true;
+                localScale.x = Math.Abs(localScale.x);
+                transform.localScale = localScale;
+            }
+            
+            /*if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
             {
                 Vector3 localScale = transform.localScale;
                 isFacingRight = !isFacingRight;
                 localScale.x *= -1f;
-                transform.localScale = localScale;
+                transform.localScale = localScale;*/
                 
                 
                 /*isFacingRight = !isFacingRight;
@@ -109,7 +125,7 @@ namespace Script.Player
                 }
                 */
                 
-            }
+           // }
             
         }
 
