@@ -2495,17 +2495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee44c2e7fef945679c665001d4afefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1488325905 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 177585827796281601, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
-  m_PrefabInstance: {fileID: 5036505154664558214}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e6280e9b50d478fa22c3f83920564f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1666069573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,14 +3128,10 @@ PrefabInstance:
       propertyPath: buildingForegroundObj
       value: 
       objectReference: {fileID: 1288215766}
-    - target: {fileID: 177585827796281601, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
-      propertyPath: movementSpeed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3147934279846383504, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: moveRef
       value: 
-      objectReference: {fileID: 1488325905}
+      objectReference: {fileID: 0}
     - target: {fileID: 3147934279846383504, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: dashValue
       value: 100
@@ -3155,10 +3140,6 @@ PrefabInstance:
       propertyPath: dashMeterImage
       value: 
       objectReference: {fileID: 1422095937}
-    - target: {fileID: 3931082791576591171, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
-      propertyPath: movementSpeed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4261322894262708184, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: maxXP
       value: 0
