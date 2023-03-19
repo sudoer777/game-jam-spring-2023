@@ -703,8 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e493eab51cdc459f8a3a83c02008d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingPoint: {fileID: 0}
-  bulletPrefab: {fileID: 3748886634273576622, guid: 4ca3a580e33afb6428cea5072c43512a, type: 3}
+  shootingPoint: {fileID: 5036505154884580561}
+  bulletPrefab: {fileID: 3748886634273576620, guid: 4ca3a580e33afb6428cea5072c43512a, type: 3}
   chargedBullet: {fileID: 6336023529669325299, guid: e3bb4502efabea2409468b5e37a59d53, type: 3}
   chargeSpeed: 0
   chargeTime: 0
