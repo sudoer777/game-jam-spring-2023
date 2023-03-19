@@ -494,9 +494,9 @@ MonoBehaviour:
   refMove: {fileID: 5036505154859350852}
   refAttack: {fileID: 963994323364480249}
   refShoot: {fileID: 32561747398793592}
-  background: {fileID: 0}
-  buildingBackground: {fileID: 0}
-  buildingForeground: {fileID: 0}
+  backgroundObj: {fileID: 0}
+  buildingBackgroundObj: {fileID: 0}
+  buildingForegroundObj: {fileID: 0}
   backgroundDay: {fileID: 21300000, guid: a77a832f6409b463486d657226e9d283, type: 3}
   backgroundNight: {fileID: 21300000, guid: 1ff6e8f0bf5b6420b96c8aa32d6e4093, type: 3}
   buildingBackgroundDay: {fileID: 21300000, guid: 784c1af7194e245aaba891c20524b938, type: 3}
@@ -548,7 +548,7 @@ Animator:
   m_GameObject: {fileID: 5036505154859350843}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b9778b1bfd0ef40fd87839b3d7f1f607, type: 2}
+  m_Controller: {fileID: 9100000, guid: b01c2778c923f40e69f0e9fda8187547, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
