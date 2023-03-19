@@ -22,6 +22,9 @@ public class switchChar : MonoBehaviour
     public Sprite buildingBackgroundNight;
     public Sprite buildingForegroundDay;
     public Sprite buildingForegroundNight;
+    public Animator characterAnimator;
+    public RuntimeAnimatorController dayAnimatorController;
+    public RuntimeAnimatorController nightAnimatorController;
 
     private bool isSol;
     private float canSwitch = 0;
@@ -83,6 +86,7 @@ public class switchChar : MonoBehaviour
                 background.sprite = backgroundNight;
                 buildingBackground.sprite = buildingBackgroundNight;
                 buildingForeground.sprite = buildingForegroundNight;
+                characterAnimator.runtimeAnimatorController = nightAnimatorController;
             }
             else if(!isSol)
             {
@@ -96,6 +100,7 @@ public class switchChar : MonoBehaviour
                 background.sprite = backgroundDay;
                 buildingBackground.sprite = buildingBackgroundDay;
                 buildingForeground.sprite = buildingForegroundDay;
+                characterAnimator.runtimeAnimatorController = dayAnimatorController;
             }
         }
     }

@@ -234,7 +234,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0cf5aac2651004b14b71a2fea6fd1e3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d24483e60a2674d27b5a51b345f44b4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -281,8 +281,8 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.008235335, y: 0.007161796}
   m_SpriteTilingProperty:
-    border: {x: 0.19999999, y: 0.049999997, z: 0.06, w: 0.03}
-    pivot: {x: 0.49835873, y: 0.5558017}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.72, y: 0.72}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -503,6 +503,9 @@ MonoBehaviour:
   buildingBackgroundNight: {fileID: 21300000, guid: 6d002d14d0eec4ef69e502810c2226d5, type: 3}
   buildingForegroundDay: {fileID: 21300000, guid: 47f5bbd41f0614cbb8f73819de4c99a1, type: 3}
   buildingForegroundNight: {fileID: 21300000, guid: 3f7fb0b4af42c4d3fab6ac113c2f8e78, type: 3}
+  characterAnimator: {fileID: 7754458624663476604}
+  dayAnimatorController: {fileID: 9100000, guid: b01c2778c923f40e69f0e9fda8187547, type: 2}
+  nightAnimatorController: {fileID: 9100000, guid: b9778b1bfd0ef40fd87839b3d7f1f607, type: 2}
 --- !u!114 &963994323364480249
 MonoBehaviour:
   m_ObjectHideFlags: 0
