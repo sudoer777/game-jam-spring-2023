@@ -742,7 +742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSFX: {fileID: 4612694063695231998}
-  movementSpeed: 4
   jumpForce: 7
   maxJumps: 2
   animator: {fileID: 7754458624663476604}
@@ -771,7 +770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSFX: {fileID: 4612694063695231998}
-  movementSpeed: 3
   jumpForce: 7
   maxJumps: 2
   animator: {fileID: 7754458624663476604}

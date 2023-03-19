@@ -113,6 +113,10 @@ namespace Script.Asra
         {
             if (Input.GetButtonDown("Jump") && jumpsRemaining > 0)
             {
+                jumping = true;
+                
+                animator.Play("Jump", -1, 0.0f);
+                
                 //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpsRemaining--;

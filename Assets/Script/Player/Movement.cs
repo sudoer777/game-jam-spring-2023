@@ -25,6 +25,7 @@ namespace Script.Player
 
         protected bool canFlip = true;
         protected bool canWalk = true;
+        protected bool jumping = false;
 
         //Dash Variables
         public bool canDash = true;
@@ -77,13 +78,16 @@ namespace Script.Player
             if (canWalk)
             {
                 rb.velocity = new Vector2(horizontal * movementSpeed, rb.velocity.y);
-                if (horizontal != 0f)
+                if (!jumping)
                 {
-                    animator.Play("Walk");
-                }
-                else
-                {
-                    animator.Play("Idle");
+                    if (horizontal != 0f)
+                    {
+                        animator.Play("Walk");
+                    }
+                    else
+                    {
+                        animator.Play("Idle");
+                    }
                 }
             }
         }
@@ -152,6 +156,7 @@ namespace Script.Player
             if (collision.gameObject.CompareTag("Ground") || isGrounded)
             {
                 jumpsRemaining = maxJumps;
+                jumping = false;
             }
         }
     }
