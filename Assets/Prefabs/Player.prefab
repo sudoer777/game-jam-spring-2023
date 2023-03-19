@@ -684,14 +684,14 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  canDash: 1
+  tr: {fileID: 5036505154859350850}
   wallCheck: {fileID: 5036505153083321765}
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
   wallSlidingSpeed: 0
   wallJumpingPower: {x: 8, y: 16}
-  canDash: 1
-  tr: {fileID: 5036505154859350850}
 --- !u!114 &3931082791576591171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,12 +713,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  wallCheck: {fileID: 5036505153083321765}
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  wallSlidingSpeed: 0
-  wallJumpingPower: {x: 8, y: 16}
   canDash: 1
   tr: {fileID: 5036505154859350850}
 --- !u!1 &5036505154884580560
