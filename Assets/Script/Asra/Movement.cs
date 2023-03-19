@@ -23,6 +23,9 @@ namespace Script.Asra
 
         private void Update()
         {
+            // Wall Jump
+            isWallTouch = Physics2D.OverlapBox(wallCheck.position, new Vector2(0.3f, 0.84f), 0, wallLayer);
+
             if (isWallTouch && !isGrounded && horizontal != 0)
             {
                 isSliding = true;
@@ -38,10 +41,6 @@ namespace Script.Asra
             WallJump();
             //Debug.Log(wallJumpingCounter);
             
-            // Wall Jump
-            isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.58f, 0.27f), 0, groundLayer);
-            isWallTouch = Physics2D.OverlapBox(wallCheck.position, new Vector2(0.3f, 0.84f), 0, wallLayer);
-
             canFlip = !isWallJumping;
             
             base.Update();

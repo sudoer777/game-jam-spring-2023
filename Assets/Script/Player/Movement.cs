@@ -15,7 +15,7 @@ namespace Script.Player
         public Animator animator;
 
         protected Rigidbody2D rb;
-        private int jumpsRemaining;
+        protected int jumpsRemaining;
 
         //Ground Stuff
         protected bool isGrounded;
@@ -24,9 +24,6 @@ namespace Script.Player
 
         protected bool canFlip = true;
         protected bool canWalk = true;
-
-
-
 
         //Dash Variables
         public bool canDash = true;
@@ -48,6 +45,8 @@ namespace Script.Player
 
         protected void Update()
         {
+            isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.58f, 0.27f), 0, groundLayer);
+
             // Move left/right
             horizontal = Input.GetAxisRaw("Horizontal");
             
@@ -144,7 +143,7 @@ namespace Script.Player
         }
         void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Ground"))
+            if (collision.gameObject.CompareTag("Ground") || isGrounded)
             {
                 jumpsRemaining = maxJumps;
             }
