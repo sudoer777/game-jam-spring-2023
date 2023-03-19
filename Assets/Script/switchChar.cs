@@ -13,17 +13,40 @@ public class switchChar : MonoBehaviour
     public MovementScript refMove;
     public attackScript refAttack;
     public shootScript refShoot;
+    public GameObject backgroundObj;
+    public GameObject buildingBackgroundObj;
+    public GameObject buildingForegroundObj;
+    public Sprite backgroundDay;
+    public Sprite backgroundNight;
+    public Sprite buildingBackgroundDay;
+    public Sprite buildingBackgroundNight;
+    public Sprite buildingForegroundDay;
+    public Sprite buildingForegroundNight;
+
     private bool isSol;
     private float canSwitch = 0;
-    private SpriteRenderer switchSprite;
+
+    private SpriteRenderer background;
+
+    private SpriteRenderer buildingBackground;
+
+    private SpriteRenderer buildingForeground;
+    
+    
+    // private SpriteRenderer switchSprite;
     // Start is called before the first frame update
     void Start()
     {
         
-        switchSprite = GetComponent<SpriteRenderer>();
+        // switchSprite = GetComponent<SpriteRenderer>();
         // switchSprite.color = new Color(1f, 0.8560839f, 0.3056604f, 1f);
         healthRef.color = new Color(0.9622642f, 0.6039352f, 0.1942684f, 1f);
-        
+
+        background = backgroundObj.GetComponent<SpriteRenderer>();
+        buildingBackground = buildingBackgroundObj.GetComponent<SpriteRenderer>();
+        buildingForeground = buildingForegroundObj.GetComponent<SpriteRenderer>();
+
+
     }
 
     // Update is called once per frame
@@ -48,7 +71,7 @@ public class switchChar : MonoBehaviour
             
             
             }
-            if(isSol == true)
+            if(isSol)
             {
                 // switchSprite.color = new Color(0.5607843f, 0.3058824f, 1f, 1f);
                 healthRef.color = new Color(0.7830674f, 0.4849057f, 1f, 1f);
@@ -57,8 +80,11 @@ public class switchChar : MonoBehaviour
                 refAttack.enabled = true;
                 playerCam.backgroundColor = new Color(0.2711051f, 0.1718227f, 0.4622642f, 1f);
 
+                background.sprite = backgroundNight;
+                buildingBackground.sprite = buildingBackgroundNight;
+                buildingForeground.sprite = buildingForegroundNight;
             }
-            else if(isSol == false)
+            else if(!isSol)
             {
                 // switchSprite.color = new Color(1f, 0.8560839f, 0.3056604f, 1f);
                 healthRef.color = new Color(0.9622642f, 0.6039352f, 0.1942684f, 1f);
@@ -66,6 +92,10 @@ public class switchChar : MonoBehaviour
                 refShoot.enabled = true;
                 refAttack.enabled = false;
                 playerCam.backgroundColor = new Color(0.346351f, 0.5565226f, 0.8867924f, 1f);
+                
+                background.sprite = backgroundDay;
+                buildingBackground.sprite = buildingBackgroundDay;
+                buildingForeground.sprite = buildingForegroundDay;
             }
         }
     }
