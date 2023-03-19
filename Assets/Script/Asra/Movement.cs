@@ -24,6 +24,7 @@ namespace Script.Asra
         private void Update()
         {
             rb.gravityScale = 2.0f;
+            movementSpeed = 4.0f;
 
             // Wall Jump
             isWallTouch = Physics2D.OverlapBox(wallCheck.position, new Vector2(0.3f, 0.84f), 0, wallLayer);
@@ -108,6 +109,15 @@ namespace Script.Asra
             isWallJumping = false;
         }
 
+        protected override void Jump()
+        {
+            if (Input.GetButtonDown("Jump") && jumpsRemaining > 0)
+            {
+                //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpsRemaining--;
+            }
+        }
     }
 }
 

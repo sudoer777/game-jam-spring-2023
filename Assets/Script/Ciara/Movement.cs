@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
 
@@ -17,15 +18,20 @@ namespace Script.Ciara
         private bool lowerFloatIsGrounded;
 
         private bool hoverMode = false;
-        private bool jumpMode = false;
+        private bool jumpMode = true;
         private float maxHoverSpeed = 0.5f;
+        private float jumpTimer = 0.0f;
 
         // private float distanceFromGround;
         public void Update()
         {
-            upperFloatIsGrounded = Physics2D.OverlapBox(upperFloatCheck.position, new Vector2(0.58f, 0.27f), 0, groundLayer);
+            movementSpeed = 3.0f;
+
+            upperFloatIsGrounded =
+                Physics2D.OverlapBox(upperFloatCheck.position, new Vector2(0.58f, 0.27f), 0, groundLayer);
             floatIsGrounded = Physics2D.OverlapBox(floatCheck.position, new Vector2(0.58f, 0.27f), 0, groundLayer);
-            lowerFloatIsGrounded = Physics2D.OverlapBox(lowerFloatCheck.position, new Vector2(0.58f, 0.27f), 0, groundLayer);
+            lowerFloatIsGrounded =
+                Physics2D.OverlapBox(lowerFloatCheck.position, new Vector2(0.58f, 0.27f), 0, groundLayer);
 
             hoverMode = ((hoverMode && lowerFloatIsGrounded) || isGrounded) && !Input.GetButton("Jump");
 
@@ -44,6 +50,7 @@ namespace Script.Ciara
                 {
                     rb.velocity = new Vector2(rb.velocity.x, maxHoverSpeed * (yVelocity / Math.Abs(yVelocity)));
                 }
+
                 rb.gravityScale =
                     isGrounded ? -1.0f :
                     lowerFloatIsGrounded ? 1.0f :
@@ -55,7 +62,33 @@ namespace Script.Ciara
                 rb.gravityScale = 2.0f;
             }
         }
-    }
+
+        protected override void Jump()
+        {
+            if (Input.GetButtonDown("Jump") && jumpsRemaining > 0)
+            {
+                //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpsRemaining--;
+                jumpMode = true;
+                jumpTimer = 0.0f;
+            }
+
+            jumpMode &= Input.GetButton("Jump");
+
+            if (jumpMode)
+            {
+                jumpTimer += Time.deltaTime;
+                jumpMode &= jumpTimer <= 1.5f;
+                rb.velocity = new Vector2(rb.velocity.x, Math.Max(rb.velocity.y, 0.0f));
+            }
+        }
+
+        private void EndJump(System.Object source, EventArgs e)
+        {
+            jumpMode = false;
+        }
+}
 }
 
 

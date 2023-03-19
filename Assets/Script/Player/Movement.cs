@@ -8,7 +8,7 @@ namespace Script.Player
     {
         public AudioSource dashSFX;
         protected float horizontal;
-        public float movementSpeed = 4.0f;
+        protected float movementSpeed;
         //Jump Variables
         public float jumpForce = 7.0f;
         public int maxJumps = 2;
@@ -113,17 +113,7 @@ namespace Script.Player
             
         }
 
-        private void Jump()
-        {
-            if (Input.GetButtonDown("Jump") && jumpsRemaining > 0)
-            {
-                //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                jumpsRemaining--;
-            }
-
-        }
-        
+        protected abstract void Jump();
 
         private IEnumerator Dash()
         {
