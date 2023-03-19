@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class dashCooldown : MonoBehaviour
 {
-    [SerializeField] private MovementScript moveRef;
+    [SerializeField] private Script.Player.Movement moveRef;
     [SerializeField] public Image dashMeterImage;
     [SerializeField] public float dashValue;
     [SerializeField] public float dashAdd = 1;

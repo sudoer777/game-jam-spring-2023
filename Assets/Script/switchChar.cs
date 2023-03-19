@@ -10,7 +10,7 @@ public class switchChar : MonoBehaviour
     public float slowDownLength = 2f;
     private float switchCooldown = 2;
     public Camera playerCam;
-    public MovementScript refMove;
+    public Script.Player.Movement refMove;
     public attackScript refAttack;
     public shootScript refShoot;
     public GameObject backgroundObj;
