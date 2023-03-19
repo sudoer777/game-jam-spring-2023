@@ -34,8 +34,9 @@ public class Bullet : MonoBehaviour
             {
                 Debug.Log("EnemyHit");
             }*/
+            other.gameObject.SendMessage("DealDamage", 50.0f);
             Destroy(gameObject);
-            Destroy(other.gameObject, 0.5f);
+            //Destroy(other.gameObject, 0.5f);
         }
     }
 }
