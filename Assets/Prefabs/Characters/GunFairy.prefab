@@ -254,13 +254,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0620a0eab6dff9f478657f1fa36afcbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPickup: {fileID: 0}
-  xpPickup: {fileID: 0}
   movementRadius: 6
   movementSpeed: 0.1
   shootDelay: 2
   projectile: {fileID: 3478736346314629009, guid: 887c426406762d04e9619f23fc1f4a6f, type: 3}
   HP: 0
+  explosion: {fileID: 5841947658800689285, guid: 0ef8d42d518af43a2a7f6068010f6e5b, type: 3}
 --- !u!95 &2303333962429242877
 Animator:
   serializedVersion: 5
