@@ -22,7 +22,6 @@ public class Gunner : Script.Enemies.Enemy
         shootTimer = 0;
         startPosition = rb.position;
         rb.velocity = Vector2.right * movementSpeed;
-        sr.flipX = true;
     }
 
     // Update is called once per frame

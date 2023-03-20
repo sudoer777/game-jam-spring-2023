@@ -23,7 +23,6 @@ namespace Script.Enemies
             rb = GetComponent<Rigidbody2D>();
             rb.velocity = (Vector2.up + Vector2.right).normalized * movementSpeed;
             sr = GetComponent<SpriteRenderer>();
-            sr.flipX = true;
         }
 
         override protected void UpdateEnemy()
