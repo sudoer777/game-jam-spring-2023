@@ -27,7 +27,7 @@ public class switchChar : MonoBehaviour
     public Script.Player.Movement dayMovement;
     public Script.Player.Movement nightMovement;
 
-    private bool isSol;
+    public bool isSol;
     private float canSwitch = 0;
 
     private SpriteRenderer background;
