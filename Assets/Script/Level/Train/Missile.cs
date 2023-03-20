@@ -22,6 +22,8 @@ public class Missile : MonoBehaviour
     private bool exploded = false;
     private GameObject bullet;
 
+    public GameObject dialogue;
+
     void Update()
     {
         if (startTime >= 0.0f)
@@ -49,7 +51,7 @@ public class Missile : MonoBehaviour
                 switchCharScript.enabled = true;
                 
                 camera.orthographicSize = 3.0f;
-
+                Instantiate(dialogue);
                 Destroy(gameObject);
             }
         }
