@@ -13,7 +13,6 @@ public class Gunner : Script.Enemies.Enemy
     private SpriteRenderer sr;
     private float shootTimer;
     private Vector2 startPosition;
-    private Vector2 velocity;
 
     // Start is called before the first frame update
     override protected void StartEnemy()
@@ -22,7 +21,7 @@ public class Gunner : Script.Enemies.Enemy
         sr = GetComponent<SpriteRenderer>();
         shootTimer = 0;
         startPosition = rb.position;
-        velocity = Vector2.right * movementSpeed;
+        rb.velocity = Vector2.right * movementSpeed;
         sr.flipX = true;
     }
 
@@ -36,18 +35,11 @@ public class Gunner : Script.Enemies.Enemy
             shootTimer = 0;
         }
         shootTimer += Time.deltaTime;
-    }
-
-    private void FixedUpdate()
-    {
         //change direction
-        if ((rb.position.x < startPosition.x && velocity.x < 0) || (rb.position.x > startPosition.x + movementRange && velocity.x > 0))
+        if ((rb.position.x < startPosition.x && rb.velocity.x < 0) || (rb.position.x > startPosition.x + movementRange && rb.velocity.x > 0))
         {
-            velocity.x *= -1;
+            rb.velocity = new Vector2(rb.velocity.x * -1, rb.velocity.y);
             sr.flipX = !sr.flipX;
         }
-
-        //move
-        rb.MovePosition(rb.position + velocity);
     }
 }
