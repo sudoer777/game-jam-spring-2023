@@ -11,6 +11,9 @@ TagManager:
   - PlayerProjectile
   - Enemy
   - traincar
+  - train_connector
+  - building_foreground
+  - train_connector_cover
   layers:
   - Default
   - TransparentFX

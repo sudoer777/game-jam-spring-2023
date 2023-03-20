@@ -22,8 +22,7 @@ public class Movement : MonoBehaviour
     {
         if ((originalPosition - transform.position).x >= sr.bounds.size.x / 2.0f)
         {
-            Instantiate(gameObject, originalPosition, Quaternion.identity);
-            Destroy(gameObject);
+            transform.position = originalPosition;
         }
     }
 }
