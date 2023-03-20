@@ -26,18 +26,13 @@ public class attackScript : MonoBehaviour
 
     void Attack()
     {
-        
-        
             attackDelay = startatkDelay;
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             foreach(Collider2D enemy in enemiesToDamage)
             {
                 Debug.Log("We hit " + enemy.name);
-                Destroy(enemy.gameObject);
+                enemy.gameObject.SendMessage("DealDamage", 50);
             }
-        
-           
-        
     }
 
     

@@ -13,7 +13,6 @@ namespace Script.Enemies
 
         private float shootTimer;
         private Vector3 startPosition;
-        private Vector3 velocity;
         private Rigidbody2D rb;
         private SpriteRenderer sr;
 
@@ -21,10 +20,9 @@ namespace Script.Enemies
         {
             startPosition = transform.position;
             shootTimer = 0;
-            velocity = (Vector3.up + Vector3.right).normalized * movementSpeed;
             rb = GetComponent<Rigidbody2D>();
+            rb.velocity = (Vector2.up + Vector2.right).normalized * movementSpeed;
             sr = GetComponent<SpriteRenderer>();
-            sr.flipX = true;
         }
 
         override protected void UpdateEnemy()
@@ -36,24 +34,19 @@ namespace Script.Enemies
                 shootTimer = 0;
             }
             shootTimer += Time.deltaTime;
-        }
-        private void FixedUpdate()
-        {
+
             //change horizontal movement
-            if (transform.position.x < startPosition.x && velocity.x < 0 || transform.position.x > startPosition.x + movementRadius && velocity.x > 0)
+            if (transform.position.x < startPosition.x && rb.velocity.x < 0 || transform.position.x > startPosition.x + movementRadius && rb.velocity.x > 0)
             {
-                velocity.x *= -1;
+                rb.velocity = new Vector2(rb.velocity.x * -1, rb.velocity.y);
                 sr.flipX = !sr.flipX;
             }
 
             //change vertical movement
-            if (transform.position.y < startPosition.y - (movementRadius / 2) && velocity.y < 0 || transform.position.y > startPosition.y + (movementRadius / 2) && velocity.y > 0)
+            if (transform.position.y < startPosition.y - (movementRadius / 2) && rb.velocity.y < 0 || transform.position.y > startPosition.y + (movementRadius / 2) && rb.velocity.y > 0)
             {
-                velocity.y *= -1;
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * -1);
             }
-
-            //move
-            rb.MovePosition(transform.position + velocity);
         }
     }
 }
