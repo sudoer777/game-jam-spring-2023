@@ -748,7 +748,7 @@ MonoBehaviour:
   groundCheck: {fileID: 5036505152947001744}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   canDash: 1
   tr: {fileID: 5036505154859350850}
   wallCheck: {fileID: 5036505153083321765}
@@ -776,7 +776,7 @@ MonoBehaviour:
   groundCheck: {fileID: 5036505152947001744}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   canDash: 1
   tr: {fileID: 5036505154859350850}
   upperFloatCheck: {fileID: 2458194975792295647}

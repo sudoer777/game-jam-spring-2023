@@ -7,6 +7,7 @@ namespace Script.Player
 {
     public abstract class Movement : MonoBehaviour
     {
+        public float HP;
         public AudioSource dashSFX;
         protected float horizontal;
         protected float movementSpeed;
@@ -34,6 +35,7 @@ namespace Script.Player
         private float dashingPower = 10f;
         private float dashingTime = 0.25f;
         private float dashingCooldown = 1f;
+        private const float maxHP = 100;
 
         [SerializeField] private TrailRenderer tr;
         void Awake()
@@ -43,6 +45,7 @@ namespace Script.Player
         protected void Start()
         {
             jumpsRemaining = maxJumps;
+            HP = maxHP;
         }
 
         protected void Update()
@@ -158,6 +161,11 @@ namespace Script.Player
                 jumpsRemaining = maxJumps;
                 jumping = false;
             }
+        }
+
+        public void DealDamage(float damage)
+        {
+            HP -= damage;
         }
     }
 }

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7798845797645460968}
   - component: {fileID: 7798845797645460969}
   - component: {fileID: 7798845797645460982}
-  - component: {fileID: 7798845797645460970}
   - component: {fileID: -6441638882359459475}
+  - component: {fileID: 7030400515044606796}
   m_Layer: 8
   m_Name: Gunner
   m_TagString: Enemy
@@ -122,7 +122,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7798845797645460983}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -135,20 +135,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7798845797645460970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7798845797645460983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f24e45f9f8b95b34789f3cc00bd2cdb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPickup: {fileID: 4868455814450133045, guid: 669308b66f341994c86853400e160e3a, type: 3}
-  xpPickup: {fileID: 2431811628923605779, guid: 0f93d7105e3ed874cb37678ca5a2fc92, type: 3}
 --- !u!95 &-6441638882359459475
 Animator:
   serializedVersion: 5
@@ -170,3 +156,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7030400515044606796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7798845797645460983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b1ddffb6e8bc34bb20b73aec303b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  explosion: {fileID: 5841947658800689285, guid: 0ef8d42d518af43a2a7f6068010f6e5b, type: 3}
+  movementRange: 5
+  movementSpeed: 0.025
+  shootDelay: 3
+  projectile: {fileID: 3478736346314629009, guid: 887c426406762d04e9619f23fc1f4a6f, type: 3}

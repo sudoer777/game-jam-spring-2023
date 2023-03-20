@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6937123455904356278}
   - component: {fileID: 1631260308548021163}
   - component: {fileID: 6328666261516403972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fairy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4505305142184430557}
   - component: {fileID: 4505305142184430545}
   - component: {fileID: 2303333962429242877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GunFairy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

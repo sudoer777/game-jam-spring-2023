@@ -6,30 +6,19 @@ namespace Script.Enemies
 {
     public abstract class Enemy : MonoBehaviour
     {
-        private float shootTimer;
-        private Vector3 startPosition;
-        private Vector3 velocity;
-        private Rigidbody2D rb;
-        private SpriteRenderer sRenderer;
-    
-        public float movementRadius;
-        public float movementSpeed;
-        public float shootDelay;
-        public GameObject projectile;
         public float HP;
         public GameObject explosion;
     
         private const float maxHP = 100;
+
+        protected abstract void StartEnemy();
+        protected abstract void UpdateEnemy();
     
         // Start is called before the first frame update
         void Start()
         {
             HP = maxHP;
-            startPosition = transform.position;
-            shootTimer = 0;
-            velocity = (Vector3.up + Vector3.right).normalized * movementSpeed;
-            rb = gameObject.GetComponent<Rigidbody2D>();
-            sRenderer = gameObject.GetComponent<SpriteRenderer>();
+            StartEnemy();
         }
     
         // Update is called once per frame
@@ -41,34 +30,9 @@ namespace Script.Enemies
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
-    
-            //shoot projectile
-            if (shootTimer >= shootDelay)
-            {
-                Instantiate(projectile, transform.position, Quaternion.identity);
-                shootTimer = 0;
-            }
-            shootTimer += Time.deltaTime;
+            UpdateEnemy();
         }
     
-        private void FixedUpdate()
-        {
-            //change horizontal movement
-            if (transform.position.x < startPosition.x && velocity.x < 0 || transform.position.x > startPosition.x + movementRadius && velocity.x > 0)
-            {
-                velocity.x *= -1;
-            }
-    
-            //change vertical movement
-            if (transform.position.y < startPosition.y - (movementRadius/2) && velocity.y < 0 || transform.position.y > startPosition.y + (movementRadius/2) && velocity.y > 0)
-            {
-                velocity.y *= -1;
-            }
-    
-            //move
-            rb.MovePosition(transform.position + velocity);
-        }
-
         public void DealDamage(float damage)
         {
             HP -= damage;
