@@ -18,7 +18,6 @@ namespace Script.Ciara
         private bool lowerFloatIsGrounded;
 
         private bool hoverMode = false;
-        private bool jumpMode = true;
         private float maxHoverSpeed = 0.5f;
         private float jumpTimer = 0.0f;
 
@@ -70,16 +69,17 @@ namespace Script.Ciara
                 //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpsRemaining--;
-                jumpMode = true;
+                jumping = true;
                 jumpTimer = 0.0f;
+                animator.Play("Jump", -1, 0.0f);
             }
 
-            jumpMode &= Input.GetButton("Jump");
+            jumping &= Input.GetButton("Jump");
 
-            if (jumpMode)
+            if (jumping)
             {
                 jumpTimer += Time.deltaTime;
-                jumpMode &= jumpTimer <= 1.5f;
+                jumping &= jumpTimer <= 1.5f;
                 rb.velocity = new Vector2(rb.velocity.x, Math.Max(rb.velocity.y, 0.0f));
             }
         }
