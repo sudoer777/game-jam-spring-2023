@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public enemyScript enemyRef;
     //private GameObject bulletSelf;
     //public float bulletSpeed;
     public Rigidbody2D rb2d;
