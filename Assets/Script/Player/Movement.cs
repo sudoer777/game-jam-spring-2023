@@ -31,7 +31,7 @@ namespace Script.Player
         public bool canDash = true;
         protected bool isFacingRight = true;
         private bool isDashing;
-        private float dashingPower = 40f;
+        private float dashingPower = 10f;
         private float dashingTime = 0.25f;
         private float dashingCooldown = 1f;
 
