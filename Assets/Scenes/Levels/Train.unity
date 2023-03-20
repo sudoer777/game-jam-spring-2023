@@ -262,6 +262,7 @@ MonoBehaviour:
   player: {fileID: 5036505154664558215}
   camera: {fileID: 519420031}
   missile: {fileID: 3748886634273576622, guid: 986a98b5d4c284245bb27eec47f020df, type: 3}
+  explodedTrainCar: {fileID: 21300000, guid: 43d0766799a1a4ab1b4ba8f2c65e3439, type: 3}
 --- !u!1 &97765111
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +321,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 784c1af7194e245aaba891c20524b938, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d002d14d0eec4ef69e502810c2226d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -628,6 +629,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2566977327031196247, guid: 48ab3f12e0d0b4599b7f5cf36c54245a, type: 3}
   m_PrefabInstance: {fileID: 269330373}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &278928632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 278928633}
+  - component: {fileID: 278928634}
+  m_Layer: 0
+  m_Name: Train wall (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &278928633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278928632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -49.93, y: -1.29, z: -0.31181702}
+  m_LocalScale: {x: 0.06, y: 27.15, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 321258230}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &278928634
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278928632}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &286884047
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +764,8 @@ Transform:
   - {fileID: 1434436860}
   - {fileID: 269330374}
   - {fileID: 1588015457}
+  - {fileID: 1325816932}
+  - {fileID: 278928633}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1508,11 +1569,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2566977325903764299, guid: 48ab3f12e0d0b4599b7f5cf36c54245a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12.86
+      value: 9.04
       objectReference: {fileID: 0}
     - target: {fileID: 2566977325903764299, guid: 48ab3f12e0d0b4599b7f5cf36c54245a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.9
+      value: -4.75
       objectReference: {fileID: 0}
     - target: {fileID: 2566977327031196246, guid: 48ab3f12e0d0b4599b7f5cf36c54245a, type: 3}
       propertyPath: m_Name
@@ -1699,7 +1760,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a77a832f6409b463486d657226e9d283, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ff6e8f0bf5b6420b96c8aa32d6e4093, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2135,8 +2196,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128479085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.96448326, y: 0.8119662, z: -1.0476112}
-  m_LocalScale: {x: 1.0874138, y: 0.06985527, z: 0.23285091}
+  m_LocalPosition: {x: 0.298, y: 0.8119662, z: -1.0476112}
+  m_LocalScale: {x: 2.39, y: 0.06985527, z: 0.23285091}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1890075576}
@@ -2181,8 +2242,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trainInside: {fileID: 21300000, guid: 3e7ad72af2c26460986be73097ab0263, type: 3}
-  trainOutside: {fileID: 21300000, guid: 540aca47622a5443f8a0502d03eb7b79, type: 3}
+  trainOutside: {fileID: 21300000, guid: 387587e4dcae34fe68ddc2ef44a02834, type: 3}
   blackout: {fileID: 2035713436}
+  explodedTrainCar: {fileID: 1081241681}
+  explodedTrain: {fileID: 21300000, guid: 43d0766799a1a4ab1b4ba8f2c65e3439, type: 3}
 --- !u!4 &1185561193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7470658532939180209, guid: 3553969940c2bdc4b94a0889258cb50a, type: 3}
@@ -2248,7 +2311,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47f5bbd41f0614cbb8f73819de4c99a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f7fb0b4af42c4d3fab6ac113c2f8e78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2307,6 +2370,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd83d3809144495c97e0fa92f1567ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1325816931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1325816932}
+  - component: {fileID: 1325816933}
+  m_Layer: 0
+  m_Name: Train wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1325816932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325816931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -46.825, y: -16.09421, z: -0.31181702}
+  m_LocalScale: {x: 0.06, y: 2.14, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 321258230}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1325816933
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325816931}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1374764834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,6 +3423,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 392550999}
     - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: isSol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: refMove
       value: 
       objectReference: {fileID: 0}
@@ -3313,6 +3438,10 @@ PrefabInstance:
       propertyPath: healthRef
       value: 
       objectReference: {fileID: 131810000}
+    - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 37653825784079131, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: playerCam
       value: 
@@ -3345,6 +3474,10 @@ PrefabInstance:
       propertyPath: buildingForegroundObj
       value: 
       objectReference: {fileID: 1288215766}
+    - target: {fileID: 177585827796281601, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147934279846383504, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: moveRef
       value: 
@@ -3361,6 +3494,10 @@ PrefabInstance:
       propertyPath: dashMeterImage
       value: 
       objectReference: {fileID: 1422095937}
+    - target: {fileID: 3931082791576591171, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4261322894262708184, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
       propertyPath: maxXP
       value: 0
@@ -3469,6 +3606,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7754458624663476604, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b9778b1bfd0ef40fd87839b3d7f1f607, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2e0522463fbf9d479a482f17969b2f0, type: 3}
 --- !u!1 &5036505154664558215 stripped

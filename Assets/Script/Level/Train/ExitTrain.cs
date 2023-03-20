@@ -7,6 +7,8 @@ public class ExitTrain : MonoBehaviour
     public Sprite trainInside;
     public Sprite trainOutside;
     public GameObject blackout;
+    public GameObject explodedTrainCar;
+    public Sprite explodedTrain;
     void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))
@@ -19,6 +21,12 @@ public class ExitTrain : MonoBehaviour
             {
                 var spriteRenderer = trainCar.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = newTrain;
+            }
+
+            if (!playerIsOutside)
+            {
+                var sr = explodedTrainCar.GetComponent<SpriteRenderer>();
+                sr.sprite = explodedTrain;
             }
 
             var trainConnectorCovers = GameObject.FindGameObjectsWithTag("train_connector_cover");
